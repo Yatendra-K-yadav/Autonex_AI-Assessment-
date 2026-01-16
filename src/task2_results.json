@@ -1,0 +1,35 @@
+[
+  {
+    "test_case": 1,
+    "url": "https://en.wikipedia.org/wiki/Taj_Mahal",
+    "success": true,
+    "reason": "Page title contains 'Taj Mahal' and infobox location contains 'Agra'",
+    "evidence": {
+      "pageTitle": "Taj Mahal",
+      "extractedLocation": "Agra, Uttar Pradesh, India",
+      "selectors": {
+        "title": "h1#firstHeading",
+        "infobox": "table.infobox",
+        "location": "infobox tr > th:contains('Location') + td"
+      }
+    }
+  },
+  {
+    "test_case": 2,
+    "url": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+    "success": false,
+    "reason": "Page title does not contain 'Taj Mahal'",
+    "evidence": {
+      "pageTitle": "Eiffel Tower"
+    }
+  },
+  {
+    "test_case": 3,
+    "url": "https://en.wikipedia.org/wiki/Agra",
+    "success": false,
+    "reason": "Page title does not contain 'Taj Mahal'",
+    "evidence": {
+      "pageTitle": "Agra"
+    }
+  }
+]
