@@ -1,0 +1,34 @@
+[
+  {
+    "test_case": 1,
+    "file": "C:\\Sem 7\\Autonex_assesment\\snapshots\\snapshot_listing.html",
+    "success": true,
+    "reason": "All constraints satisfied: price 2800 \u2264 3000, city 'Pune' matches, bedrooms 2 = 2",
+    "evidence": {
+      "price": 2800,
+      "city": "Pune",
+      "bedrooms": 2,
+      "selectors": {
+        "price": "[data-price]",
+        "city": "[data-city]",
+        "bedrooms": "[data-bedrooms]"
+      }
+    }
+  },
+  {
+    "test_case": 2,
+    "file": "C:\\Sem 7\\Autonex_assesment\\snapshots\\snapshot_listing_fail.html",
+    "success": false,
+    "reason": "Constraint violations: price 4500 > 3000, city 'Mumbai' \u2260 'Pune', bedrooms 3 \u2260 2",
+    "evidence": {
+      "price": 4500,
+      "city": "Mumbai",
+      "bedrooms": 3,
+      "violations": [
+        "price",
+        "city",
+        "bedrooms"
+      ]
+    }
+  }
+]
