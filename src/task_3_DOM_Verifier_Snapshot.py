@@ -151,6 +151,6 @@ if __name__ == "__main__":
         )
 
     with open("task3_results.json", "w", encoding="utf-8") as f:
-        json.dump(all_results, f, indent=2)
+        json.dump(all_results, f, indent=2, ensure_ascii=False)
 
     print("\n✅ All Task 3 test cases passed. Results saved to task3_results.json")
