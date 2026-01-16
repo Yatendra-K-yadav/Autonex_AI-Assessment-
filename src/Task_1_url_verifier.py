@@ -106,19 +106,40 @@ if __name__ == "__main__":
  
     # print("\n✅ All test cases passed successfully!")
 
+    # for i, (url, expected) in enumerate(test_urls, start=1):
+    #     result = verify_url(url, constraints)
+
+    #     print(json.dumps({
+    #         "test_case": i,
+    #         "url": url,
+    #         **result
+    #     }, indent=2))
+
+    #     assert result["success"] == expected, (
+    #         f"Test case {i} failed: expected {expected}, got {result['success']}"
+    #     )
+
+    # print("\nAll test cases passed.")
+    
+    all_results = []
+
     for i, (url, expected) in enumerate(test_urls, start=1):
         result = verify_url(url, constraints)
-
-        print(json.dumps({
+        
+        output = {
             "test_case": i,
             "url": url,
             **result
-        }, indent=2))
+        }
 
-        assert result["success"] == expected, (
-            f"Test case {i} failed: expected {expected}, got {result['success']}"
-        )
+        print(json.dumps(output, indent=2))
+        all_results.append(output)
 
-    print("\nAll test cases passed.")
+        assert result["success"] == expected
 
+    # Save once at the end
+    with open("task1_results.json", "w", encoding="utf-8") as f:
+        json.dump(all_results, f, indent=2)
+
+    print("\nResults saved to task1_results.json")
 

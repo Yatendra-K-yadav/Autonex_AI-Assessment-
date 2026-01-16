@@ -1,0 +1,84 @@
+[
+  {
+    "test_case": 1,
+    "url": "https://github.com/search?q=repo%3Amicrosoft%2Fplaywright+is%3Aissue+is%3Aopen+label%3Abug&type=issues",
+    "success": true,
+    "reason": "URL query contains repo:microsoft/playwright, is:issue, is:open, label:bug, type=issues",
+    "evidence": {
+      "repo": "microsoft/playwright",
+      "type": "issues",
+      "tokensFound": [
+        "is:issue",
+        "is:open",
+        "label:bug",
+        "repo:microsoft/playwright"
+      ]
+    }
+  },
+  {
+    "test_case": 2,
+    "url": "https://github.com/search?q=repo%3Amicrosoft%2Fplaywright+is%3Apr&type=issues",
+    "success": false,
+    "reason": "Missing required search tokens",
+    "evidence": {
+      "tokens_found": [
+        "is:pr",
+        "repo:microsoft/playwright"
+      ],
+      "tokens_missing": [
+        "is:issue",
+        "is:open",
+        "label:bug"
+      ]
+    }
+  },
+  {
+    "test_case": 3,
+    "url": "https://github.com/search?q=repo%3Amicrosoft%2Fplaywright+is%3Aissue+label%3Adocumentation&type=issues",
+    "success": false,
+    "reason": "Missing required search tokens",
+    "evidence": {
+      "tokens_found": [
+        "is:issue",
+        "label:documentation",
+        "repo:microsoft/playwright"
+      ],
+      "tokens_missing": [
+        "is:open",
+        "label:bug"
+      ]
+    }
+  },
+  {
+    "test_case": 4,
+    "url": "https://github.com/search?q=label%3Abug+is%3Aopen+repo%3Amicrosoft%2Fplaywright+is%3Aissue&type=issues",
+    "success": true,
+    "reason": "URL query contains repo:microsoft/playwright, is:issue, is:open, label:bug, type=issues",
+    "evidence": {
+      "repo": "microsoft/playwright",
+      "type": "issues",
+      "tokensFound": [
+        "is:issue",
+        "is:open",
+        "label:bug",
+        "repo:microsoft/playwright"
+      ]
+    }
+  },
+  {
+    "test_case": 5,
+    "url": "https://github.com/search?q=repo:microsoft/playwright+is:issue+is:open+label:bug&type=issues",
+    "success": true,
+    "reason": "URL query contains repo:microsoft/playwright, is:issue, is:open, label:bug, type=issues",
+    "evidence": {
+      "repo": "microsoft/playwright",
+      "type": "issues",
+      "tokensFound": [
+        "is:issue",
+        "is:open",
+        "label:bug",
+        "repo:microsoft/playwright"
+      ]
+    }
+  }
+]
