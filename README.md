@@ -10,7 +10,7 @@ All verifiers return **structured JSON output with evidence**, not just pass/fai
 
 ```
 AUTONEX_ASSESSMENT/
-├── myenv/                         # Python virtual environment (not required for submission)
+├── myenv/                         
 │
 ├── snapshots/
 │   ├── snapshot_listing.html      # HTML snapshot (PASS case)
