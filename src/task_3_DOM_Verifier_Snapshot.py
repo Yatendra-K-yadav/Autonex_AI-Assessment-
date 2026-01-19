@@ -6,6 +6,7 @@
 #  → return result + evidence
 from bs4 import BeautifulSoup
 import json
+import os
 
 
 def verify_from_html(html_string: str, constraints: dict) -> dict:
@@ -124,9 +125,12 @@ if __name__ == "__main__":
         "bedrooms": 2
     }
 
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    SNAPSHOT_DIR = os.path.join(BASE_DIR, "snapshots")
+
     files = [
-        ("C:\\Sem 7\\Autonex_assesment\\snapshots\\snapshot_listing.html", True),
-        ("C:\\Sem 7\\Autonex_assesment\\snapshots\\snapshot_listing_fail.html", False)
+        (os.path.join(SNAPSHOT_DIR, "snapshot_listing.html"), True),
+        (os.path.join(SNAPSHOT_DIR, "snapshot_listing_fail.html"), False)
     ]
 
     all_results = []
