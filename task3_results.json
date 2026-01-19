@@ -1,7 +1,7 @@
 [
   {
     "test_case": 1,
-    "file": "C:\\Sem 7\\Autonex_assesment\\snapshots\\snapshot_listing.html",
+    "file": "snapshots\\snapshot_listing.html",
     "success": true,
     "reason": "All constraints satisfied: price 2800 ≤ 3000, city 'Pune' matches, bedrooms 2 = 2",
     "evidence": {
@@ -17,7 +17,7 @@
   },
   {
     "test_case": 2,
-    "file": "C:\\Sem 7\\Autonex_assesment\\snapshots\\snapshot_listing_fail.html",
+    "file": "snapshots\\snapshot_listing_fail.html",
     "success": false,
     "reason": "Constraint violations: price 4500 > 3000, city 'Mumbai' ≠ 'Pune', bedrooms 3 ≠ 2",
     "evidence": {

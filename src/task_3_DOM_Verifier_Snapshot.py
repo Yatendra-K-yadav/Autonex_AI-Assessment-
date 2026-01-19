@@ -125,12 +125,17 @@ if __name__ == "__main__":
         "bedrooms": 2
     }
 
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    SNAPSHOT_DIR = os.path.join(BASE_DIR, "snapshots")
+    # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    # SNAPSHOT_DIR = os.path.join(BASE_DIR, "snapshots")
+
+    # files = [
+    #     (os.path.join(SNAPSHOT_DIR, "snapshot_listing.html"), True),
+    #     (os.path.join(SNAPSHOT_DIR, "snapshot_listing_fail.html"), False)
+    # ]
 
     files = [
-        (os.path.join(SNAPSHOT_DIR, "snapshot_listing.html"), True),
-        (os.path.join(SNAPSHOT_DIR, "snapshot_listing_fail.html"), False)
+        ("snapshots\\snapshot_listing.html", True),
+        ("snapshots\\snapshot_listing_fail.html", False)
     ]
 
     all_results = []
